@@ -15,26 +15,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.jayway.restassured</groupId>
-			<artifactId>rest-assured</artifactId>
-			<version>2.4.1</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>com.jayway.restassured</groupId>
-			<artifactId>json-path</artifactId>
-			<version>2.4.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.jayway.restassured</groupId>
-			<artifactId>json-schema-validator</artifactId>
-			<version>2.4.1</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
@@ -172,4 +152,5 @@
 	</build>
 
 
+	<packaging>war</packaging>
 </project>
