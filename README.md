@@ -1,4 +1,4 @@
-# estudies-spring-mvc
+# estudies-spring
 
 
 Readme under construction.
