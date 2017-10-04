@@ -26,10 +26,10 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.springframework.data:spring-data-jpa:2.0.0.RELEASE')
-	compile('mysql:mysql-connector-java:8.0.8-dmr')
+	compile('org.springframework.data:spring-data-jpa')
+	compile('mysql:mysql-connector-java')
 	compile('org.springframework.boot:spring-boot-starter-security')
-	
+	compile('org.eclipse.persistence:javax.persistence:2.2.0')
 	
 	
 	runtime('org.springframework.boot:spring-boot-devtools')
