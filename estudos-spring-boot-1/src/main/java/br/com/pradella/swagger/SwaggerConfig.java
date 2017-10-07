@@ -1,4 +1,4 @@
-package br.com.pradella.Swagger;
+package br.com.pradella.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

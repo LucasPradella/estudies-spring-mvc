@@ -1,4 +1,4 @@
-package br.com.pradella.Service;
+package br.com.pradella.services;
 
 import org.springframework.stereotype.Service;
 
