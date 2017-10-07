@@ -1,4 +1,4 @@
-package br.com.pradella.BCrypt;
+/*package br.com.pradella.BCrypt;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -41,3 +41,4 @@ public class SenhasUtils {
 	
 
 }
+*/
