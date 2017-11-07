@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2017-11-07T18:28:50" hostname="LucasPradella" time="0.002">
+  <properties/>
+  <testcase name="contextLoads" classname="br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests" time="0.002">
+    <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unable to obtain Jdbc connection from DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:372)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 45 more
+Caused by: org.flywaydb.core.api.FlywayException: Unable to obtain Jdbc connection from DataSource
+	at org.flywaydb.core.internal.util.jdbc.JdbcUtils.openConnection(JdbcUtils.java:56)
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1385)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1006)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	... 62 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:341)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2192)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024)
+	at com.mysql.jdbc.ConnectionImpl.&lt;init&gt;(ConnectionImpl.java:779)
+	at com.mysql.jdbc.JDBC4Connection.&lt;init&gt;(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.&lt;init&gt;(ConnectionPool.java:154)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107)
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131)
+	at org.flywaydb.core.internal.util.jdbc.JdbcUtils.openConnection(JdbcUtils.java:50)
+	... 67 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.&lt;init&gt;(MysqlIO.java:300)
+	... 89 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[16:28:16.365 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]
+16:28:16.373 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+16:28:16.384 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+16:28:16.401 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+16:28:16.421 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests], using SpringBootContextLoader
+16:28:16.425 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]: class path resource [br/com/pradella/exemplo/EstudosSpringBoot1ApplicationTests-context.xml] does not exist
+16:28:16.426 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]: class path resource [br/com/pradella/exemplo/EstudosSpringBoot1ApplicationTestsContext.groovy] does not exist
+16:28:16.427 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:28:16.428 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]: EstudosSpringBoot1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:28:16.507 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]
+16:28:16.519 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+16:28:16.520 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+16:28:16.520 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+16:28:16.535 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [br/com/pradella/exemplo/] to resources [URL [file:/C:/Users/Lucas/git/estudies-spring-mvc/estudos-spring-boot-1/build/classes/test/br/com/pradella/exemplo/]]
+16:28:16.535 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1\build\classes\test\br\com\pradella\exemplo]
+16:28:16.536 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1\build\classes\test\br\com\pradella\exemplo] for files matching pattern [C:/Users/Lucas/git/estudies-spring-mvc/estudos-spring-boot-1/build/classes/test/br/com/pradella/exemplo/*.class]
+16:28:16.541 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:br/com/pradella/exemplo/*.class] to resources [file [C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1\build\classes\test\br\com\pradella\exemplo\EstudosSpringBoot1ApplicationTests.class]]
+16:28:16.559 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [br/com/pradella/] to resources [URL [file:/C:/Users/Lucas/git/estudies-spring-mvc/estudos-spring-boot-1/build/classes/test/br/com/pradella/], URL [file:/C:/Users/Lucas/git/estudies-spring-mvc/estudos-spring-boot-1/build/classes/main/br/com/pradella/]]
+16:28:16.559 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1\build\classes\test\br\com\pradella]
+16:28:16.561 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1\build\classes\test\br\com\pradella] for files matching pattern [C:/Users/Lucas/git/estudies-spring-mvc/estudos-spring-boot-1/build/classes/test/br/com/pradella/*.class]
+16:28:16.562 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1\build\classes\main\br\com\pradella]
+16:28:16.564 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1\build\classes\main\br\com\pradella] for files matching pattern [C:/Users/Lucas/git/estudies-spring-mvc/estudos-spring-boot-1/build/classes/main/br/com/pradella/*.class]
+16:28:16.570 [Test worker] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:br/com/pradella/*.class] to resources [file [C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1\build\classes\main\br\com\pradella\EstudosSpringBoot1Application.class], file [C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1\build\classes\main\br\com\pradella\MongoDbApplication.class]]
+16:28:16.616 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1\build\classes\main\br\com\pradella\EstudosSpringBoot1Application.class]
+16:28:16.622 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration br.com.pradella.EstudosSpringBoot1Application for test class br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests
+16:28:16.630 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]: using defaults.
+16:28:16.636 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+16:28:16.662 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@626800a1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@73db0a16, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7d6b6068, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c740be8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3ebb7dcf, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@159b4bb4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3355114f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@f427786, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6af226a4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@257b16a5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3e3fb42c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@22dd0a2a]
+16:28:16.665 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]
+16:28:16.665 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]
+16:28:16.666 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]
+16:28:16.666 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]
+16:28:16.672 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@7824c922 testClass = EstudosSpringBoot1ApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6f541cdf testClass = EstudosSpringBoot1ApplicationTests, locations = '{}', classes = '{class br.com.pradella.EstudosSpringBoot1Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@6af84464, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5113ffb5, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@78db4df9], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+16:28:16.673 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]
+16:28:16.674 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests]
+16:28:16.760 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+16:28:16.761 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+16:28:16.761 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+16:28:16.762 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+16:28:16.763 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.7.RELEASE)
+
+2017-11-07 16:28:17.452  INFO 23828 --- [    Test worker] c.p.e.EstudosSpringBoot1ApplicationTests : Starting EstudosSpringBoot1ApplicationTests on LucasPradella with PID 23828 (started by Lucas in C:\Users\Lucas\git\estudies-spring-mvc\estudos-spring-boot-1)
+2017-11-07 16:28:17.453  INFO 23828 --- [    Test worker] c.p.e.EstudosSpringBoot1ApplicationTests : No active profile set, falling back to default profiles: default
+2017-11-07 16:28:17.523  INFO 23828 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4eb97b6c: startup date [Tue Nov 07 16:28:17 BRST 2017]; root of context hierarchy
+2017-11-07 16:28:24.259  INFO 23828 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]]
+2017-11-07 16:28:24.398  INFO 23828 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-07 16:28:24.489  INFO 23828 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface br.com.pradella.Mongo.ClienteRepository.
+2017-11-07 16:28:24.632  INFO 23828 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-11-07 16:28:24.688  INFO 23828 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface br.com.pradella.jpa.EmpresaRepository.
+2017-11-07 16:28:24.690  INFO 23828 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface br.com.pradella.repository.UsuarioRepository.
+2017-11-07 16:28:26.675  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7dc158c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:26.734  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$c6d38ee3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:26.760  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$$EnhancerBySpringCGLIB$$bb475387] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:27.478  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$$EnhancerBySpringCGLIB$$a83af02f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:28.542  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'stringOrNumberMigrationVersionConverter' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$StringOrNumberToMigrationVersionConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:30.404  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cache-org.springframework.boot.autoconfigure.cache.CacheProperties' of type [org.springframework.boot.autoconfigure.cache.CacheProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:30.415  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers' of type [org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:30.419  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration' of type [org.springframework.boot.autoconfigure.cache.SimpleCacheConfiguration$$EnhancerBySpringCGLIB$$5ce2c668] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:30.431  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.springframework.cache.concurrent.ConcurrentMapCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:30.432  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'cacheAutoConfigurationValidator' of type [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration$CacheManagerValidator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:30.475  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$166f20ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:30.705  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:30.709  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5693ed25' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:30.716  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$3b43c3b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:30.732  INFO 23828 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-11-07 16:28:34.837  INFO 23828 --- [    Test worker] o.f.core.internal.util.VersionPrinter    : Flyway 3.2.1 by Boxfuse
+2017-11-07 16:28:50.513 ERROR 23828 --- [    Test worker] o.a.tomcat.jdbc.pool.ConnectionPool      : Unable to create initial connections of pool.
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2192) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735) [tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667) [tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482) [tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154) [tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118) [tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107) [tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131) [tomcat-jdbc-8.5.15.jar:na]
+	at org.flywaydb.core.internal.util.jdbc.JdbcUtils.openConnection(JdbcUtils.java:50) [flyway-core-3.2.1.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1385) [flyway-core-3.2.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1006) [flyway-core-3.2.1.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) [spring-boot-autoconfigure-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) [spring-boot-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:372) [spring-boot-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111) [spring-boot-test-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114) [gradle-testing-jvm-2.14.1.jar:2.14.1]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57) [gradle-testing-jvm-2.14.1.jar:2.14.1]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66) [gradle-testing-jvm-2.14.1.jar:2.14.1]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51) [gradle-testing-base-2.14.1.jar:2.14.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_131]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93) [gradle-messaging-2.14.1.jar:2.14.1]
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source) [na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109) [gradle-testing-base-2.14.1.jar:2.14.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_131]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54) [gradle-base-services-2.14.1.jar:2.14.1]
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40) [gradle-base-services-2.14.1.jar:2.14.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_131]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_131]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_131]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	... 89 common frames omitted
+
+2017-11-07 16:28:50.521  WARN 23828 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unable to obtain Jdbc connection from DataSource
+2017-11-07 16:28:50.528  WARN 23828 --- [    Test worker] o.s.boot.SpringApplication               : Error handling failed (Error creating bean with name 'delegatingApplicationListener' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'metaDataSourceAdvisor': Cannot resolve reference to bean 'methodSecurityMetadataSource' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available)
+2017-11-07 16:28:50.534 ERROR 23828 --- [    Test worker] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unable to obtain Jdbc connection from DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) ~[spring-boot-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:372) ~[spring-boot-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111) [spring-boot-test-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114) [gradle-testing-jvm-2.14.1.jar:2.14.1]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57) [gradle-testing-jvm-2.14.1.jar:2.14.1]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66) [gradle-testing-jvm-2.14.1.jar:2.14.1]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51) [gradle-testing-base-2.14.1.jar:2.14.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_131]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93) [gradle-messaging-2.14.1.jar:2.14.1]
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source) [na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109) [gradle-testing-base-2.14.1.jar:2.14.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_131]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54) [gradle-base-services-2.14.1.jar:2.14.1]
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40) [gradle-base-services-2.14.1.jar:2.14.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_131]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_131]
+Caused by: org.flywaydb.core.api.FlywayException: Unable to obtain Jdbc connection from DataSource
+	at org.flywaydb.core.internal.util.jdbc.JdbcUtils.openConnection(JdbcUtils.java:56) ~[flyway-core-3.2.1.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1385) ~[flyway-core-3.2.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1006) ~[flyway-core-3.2.1.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 62 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2192) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.flywaydb.core.internal.util.jdbc.JdbcUtils.openConnection(JdbcUtils.java:50) ~[flyway-core-3.2.1.jar:na]
+	... 67 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_131]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	... 89 common frames omitted
+
+2017-11-07 16:28:50.543 ERROR 23828 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@626800a1] to prepare test instance [br.com.pradella.exemplo.EstudosSpringBoot1ApplicationTests@6ed02381]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83) ~[spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189) ~[spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131) ~[spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230) ~[spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191) [spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114) [gradle-testing-jvm-2.14.1.jar:2.14.1]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57) [gradle-testing-jvm-2.14.1.jar:2.14.1]
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66) [gradle-testing-jvm-2.14.1.jar:2.14.1]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51) [gradle-testing-base-2.14.1.jar:2.14.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_131]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93) [gradle-messaging-2.14.1.jar:2.14.1]
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source) [na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109) [gradle-testing-base-2.14.1.jar:2.14.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_131]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377) [gradle-messaging-2.14.1.jar:2.14.1]
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54) [gradle-base-services-2.14.1.jar:2.14.1]
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40) [gradle-base-services-2.14.1.jar:2.14.1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_131]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_131]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unable to obtain Jdbc connection from DataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1078) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) ~[spring-boot-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:372) ~[spring-boot-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:111) ~[spring-boot-test-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98) ~[spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116) ~[spring-test-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 45 common frames omitted
+Caused by: org.flywaydb.core.api.FlywayException: Unable to obtain Jdbc connection from DataSource
+	at org.flywaydb.core.internal.util.jdbc.JdbcUtils.openConnection(JdbcUtils.java:56) ~[flyway-core-3.2.1.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:1385) ~[flyway-core-3.2.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:1006) ~[flyway-core-3.2.1.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-1.4.7.RELEASE.jar:1.4.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624) ~[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	... 62 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:989) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:341) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2192) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2225) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2024) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_131]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_131]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131) ~[tomcat-jdbc-8.5.15.jar:na]
+	at org.flywaydb.core.internal.util.jdbc.JdbcUtils.openConnection(JdbcUtils.java:50) ~[flyway-core-3.2.1.jar:na]
+	... 67 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_131]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_131]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_131]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_131]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300) ~[mysql-connector-java-5.1.42.jar:5.1.42]
+	... 89 common frames omitted
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
